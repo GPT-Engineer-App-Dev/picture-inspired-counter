@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, VStack, Text, Button, HStack, Box } from "@chakra-ui/react";
+import { Container, VStack, Button, HStack, Box } from "@chakra-ui/react";
 
 const Index = () => {
   const [count, setCount] = useState(0);
@@ -35,8 +35,8 @@ const Index = () => {
 
   if (!isOn) {
     return (
-      <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-        <Button onClick={handleOnOff} colorScheme="red">
+      <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bg="#FF0000">
+        <Button onClick={handleOnOff} colorScheme="whiteAlpha" bg="white" color="black" fontSize="xl" padding="6" borderRadius="full" boxShadow="lg">
           On
         </Button>
       </Container>
@@ -44,11 +44,11 @@ const Index = () => {
   }
 
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bg="#FF0000">
       <VStack spacing={4}>
         <Box
           bg="black"
-          color="green.400"
+          color="white"
           fontSize="6xl"
           fontFamily="monospace"
           padding="4"
@@ -58,13 +58,13 @@ const Index = () => {
           {count}
         </Box>
         <HStack spacing={4}>
-          <Button onClick={handleStartStop} colorScheme={isRunning ? "red" : "green"}>
+          <Button onClick={handleStartStop} colorScheme="whiteAlpha" bg="white" color="black" fontSize="xl" padding="6" borderRadius="full" boxShadow="lg">
             {isRunning ? "Stop" : "Start"}
           </Button>
-          <Button onClick={handleReset} colorScheme="yellow">
+          <Button onClick={handleReset} colorScheme="whiteAlpha" bg="white" color="black" fontSize="xl" padding="6" borderRadius="full" boxShadow="lg">
             Reset
           </Button>
-          <Button onClick={handleOnOff} colorScheme="red">
+          <Button onClick={handleOnOff} colorScheme="whiteAlpha" bg="white" color="black" fontSize="xl" padding="6" borderRadius="full" boxShadow="lg">
             Off
           </Button>
         </HStack>
